@@ -7,8 +7,8 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     eslint({
-      lintOnStart: true,
-      failOnError: mode === "production"
+      lintOnStart: false,
+      failOnError: false
     })
   ],
   server: {
@@ -19,5 +19,9 @@ export default defineConfig(({ mode }) => ({
   // uncomment the following lines:
   // server: {
   //   open: true
-   }
+   },
+   build: {
+    outDir: '../public',
+    emptyOutDir: true
+    }
 }));

@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: connect_production
-  username: connect
-  password: <%= ENV["CONNECT_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

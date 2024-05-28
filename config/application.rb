@@ -23,6 +23,11 @@ module Connect
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
+    
+    # Load the routes for other parts of rails, THEN load the main_app routes
+    config.railties_order = [:all, :main_app]
+
+
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
